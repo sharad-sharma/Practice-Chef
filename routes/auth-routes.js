@@ -64,7 +64,7 @@ router.get("/codechef/redirect", (req, res) => {
         //res.send(data);
         const userDetails = await getUserName(data.result.data.access_token);
 
-        //res.send(userDetails.username);
+        res.send(userDetails.username);
         try {
           req.session.username = userDetails.username;
           User.findOne({ username: userDetails.username })
