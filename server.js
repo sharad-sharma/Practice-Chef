@@ -19,17 +19,17 @@ app.use(session({
   resave: true}));
 
 // User redirect when any webpage url hitted
-app.use('/', (req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://practicechef.herokuapp.com");
+// app.use('/', (req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "https://practicechef.herokuapp.com");
 
-  if(!req.session.username && req.path !== '/auth/login' && req.path !== '/auth/loginwithcodechef' && req.path !== '/auth/codechef/redirect' && req.path !== '/auth/isAuthenticated') {
-    console.log('new user redirect');
-    //res.redirect('/auth/login');
-    res.redirect('https://practicechef.herokuapp.com/Login')
-  } else {
-    next();
-  }
-});
+//   if(!req.session.username && req.path !== '/auth/login' && req.path !== '/auth/loginwithcodechef' && req.path !== '/auth/codechef/redirect' && req.path !== '/auth/isAuthenticated') {
+//     console.log('new user redirect');
+//     //res.redirect('/auth/login');
+//     res.redirect('https://practicechef.herokuapp.com/Login')
+//   } else {
+//     next();
+//   }
+// });
 
 // redirect already logged in user
 // app.get('/', (req, res) => {
