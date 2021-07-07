@@ -97,17 +97,21 @@ router.get("/codechef/redirect", (req, res) => {
                   .then((newUser) => {
                     console.log("new user created: " + newUser);
                   })
-                  .catch((err) => console.log(err));
+                  .catch((err) => {
+                    console.log(err)
+                    res.send(err);
+                  });
               }
             })
             .catch((err) => {
               console.log("Error in mongodb", err);
+              res.send(err);
             });
         } catch (err) {
           console.log("Error in dealing with mongodb");
         }
 
-        req.session.username = userDetails.username;
+        req.session.username = await userDetails.username;
         res.redirect('https://practicechef.herokuapp.com/');
         //res.redirect('/profile/dashboard');
         //res.status('Success').send(userDetails.username);
