@@ -8,6 +8,9 @@
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Sharad Sharma",
+  "engine": {
+    "node": "12.x"
+  },
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
