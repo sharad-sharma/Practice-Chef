@@ -6,13 +6,13 @@ const User = require("../models/user-model");
 const session = require("express-session");
 
 // auth login
-router.get("/login", (req, res) => {
-  res.send("It basically show login button and other details about app");
-});
+// router.get("/login", (req, res) => {
+//   res.send("It basically show login button and other details about app");
+// });
 
 // auth logout
 router.get("/logout", (req, res) => {
-  console.log("user", req.session.username, "just logged out")
+  //console.log("user", req.session.username, "just logged out")
   delete req.session.username;
   res.redirect('https://practicechef.herokuapp.com/Login')
   //res.send("Logging out");
@@ -71,7 +71,7 @@ router.get("/codechef/redirect", (req, res) => {
             .then((currentUser) => {
               if (currentUser) {
                 // already have the user
-                console.log("user is ", currentUser);
+                //console.log("user is ", currentUser);
                 User.updateOne(
                   { username: userDetails.username },
                   {
@@ -80,9 +80,9 @@ router.get("/codechef/redirect", (req, res) => {
                   },
                   (err, docs) => {
                     if (err) {
-                      console.log(err);
+                      //console.log(err);
                     } else {
-                      console.log("Updated", docs);
+                      //console.log("Updated", docs);
                     }
                   }
                 );

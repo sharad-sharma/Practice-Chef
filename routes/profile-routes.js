@@ -4,9 +4,9 @@ const router = require("express").Router();
 const https = require("https");
 
 // user's dashboard
-router.get("/dashboard", (req, res) => {
-  res.send("Hello user, consider it's your dashboard for now");
-});
+// router.get("/dashboard", (req, res) => {
+//   res.send("Hello user, consider it's your dashboard for now");
+// });
 
 // to-do
 // I'm supposed to pass problem data and to-do list data from here.
@@ -14,13 +14,15 @@ router.get("/dashboard", (req, res) => {
 // contest List
 router.get("/fetchContests", (req, res) => {
   try {
-    LongChallenge.find({})
+    if(req.session.username) {
+      LongChallenge.find({})
       .then((collection) => {
         res.send(collection);
       }).catch((err) => {
         console.log("Error in mongodb", err);
         res.send("error in mongodb");
       });
+    }
   } catch(err) {
     console.log(err);
     res.send("error");
