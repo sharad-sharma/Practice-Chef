@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Navbar({ changeUser, navmssg, doRefresh, isAuthenticated }) {
+function Navbar() {
   const classes = useStyles();
   
   const [username, setUsername] = useState('')
