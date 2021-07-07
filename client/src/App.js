@@ -1,5 +1,5 @@
 import { MuiThemeProvider } from '@material-ui/core';
-import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import { createMuiTheme } from "@material-ui/core/styles";
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
