@@ -16,7 +16,7 @@ app.use(cors({credentials: true}));
 app.use(session({
   secret: 'this is supposed to be secret',
   saveUninitialized: true,
-  cookie: { sameSite: 'strict', maxAge: 60 * 60 * 1000 },
+  cookie: { sameSite: 'strict', maxAge: 24*60 * 60 * 1000 },
   resave: true, secure: false}));
 
 // User redirect when any webpage url hitted
