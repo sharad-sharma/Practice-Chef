@@ -53,9 +53,9 @@ app.use("/profile", profileRoutes);
 app.use("/admin", adminRoutes);
 
 // create home route
-app.get("/", (req, res) => {
-  res.send("hello im working");
-});
+// app.get("/", (req, res) => {
+//   res.send("hello im working");
+// });
 
 // Serve static assets if in production
 if(process.env.NODE_ENV === 'production') {

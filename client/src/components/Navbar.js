@@ -70,7 +70,7 @@ function Navbar({ changeUser, navmssg, doRefresh, isAuthenticated }) {
   useEffect(() => {
     // console.log('here me')
     axios
-      .get("http://localhost:5000/auth/isAuthenticated", {
+      .get("https://practicechef.herokuapp.com/auth/isAuthenticated", {
         withCredentials: true,
       })
       .then((res) => {
@@ -152,7 +152,7 @@ function Navbar({ changeUser, navmssg, doRefresh, isAuthenticated }) {
           <div>
             {
               !isAuth ?
-                <Button color="inherit" href="http://localhost:5000/auth/loginwithcodechef">Login</Button>
+                <Button color="inherit" href="https://practicechef.herokuapp.com/auth/loginwithcodechef">Login</Button>
               :
                 // <Button color="inherit" href="http://localhost:5000/auth/logout">Logout {username}</Button>
                 
@@ -177,7 +177,7 @@ function Navbar({ changeUser, navmssg, doRefresh, isAuthenticated }) {
               onClose={handleClose2}
             >
               <MenuItem component={Link2} target="_blank" rel="noopener" href={`https://www.codechef.com/users/${username}`} onClick={handleClose2}>Profile</MenuItem>
-              <MenuItem component={Link2} rel="noopener" href="http://localhost:5000/auth/logout" onClick={handleClose2}>Logout</MenuItem>
+              <MenuItem component={Link2} rel="noopener" href="https://practicechef.herokuapp.com/auth/logout" onClick={handleClose2}>Logout</MenuItem>
             </Menu>
           </div>
         </Toolbar>
