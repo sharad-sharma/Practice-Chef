@@ -15,8 +15,9 @@ app.use(cors({credentials: true}));
 // session to store username
 app.use(session({
   secret: 'this is supposed to be secret',
+  saveUninitialized: true,
   cookie: { sameSite: 'strict', maxAge: 60 * 60 * 1000 },
-  resave: true}));
+  resave: true, secure: false}));
 
 // User redirect when any webpage url hitted
 // app.use('/', (req, res, next) => {
