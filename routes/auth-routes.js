@@ -14,7 +14,7 @@ router.get("/login", (req, res) => {
 router.get("/logout", (req, res) => {
   console.log("user", req.session.username, "just logged out")
   delete req.session.username;
-  res.redirect('http://localhost:3000/Login')
+  res.redirect('https://practicechef.herokuapp.com/Login')
   //res.send("Logging out");
 });
 
@@ -108,7 +108,7 @@ router.get("/codechef/redirect", (req, res) => {
         }
 
         req.session.username = userDetails.username;
-        res.redirect('http://localhost:3000');
+        res.redirect('https://practicechef.herokuapp.com/');
         //res.redirect('/profile/dashboard');
         //res.status('Success').send(userDetails.username);
       } catch (err) {

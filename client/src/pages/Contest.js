@@ -33,7 +33,7 @@ const Contest = () => {
     // console.log('here me')
     setisAuth(true);    // It should be true intially otherwise it will never open
     axios
-    .get('http://localhost:5000/auth/isAuthenticated', {withCredentials: true})
+    .get('https://practicechef.herokuapp.com/auth/isAuthenticated', {withCredentials: true})
     .then(res => {
       //console.log(res, "contest.js");
       if(res.data === "NO") {
@@ -56,7 +56,7 @@ const Contest = () => {
     } else {
       //console.log('Username: ', username);
       axios
-        .get('http://localhost:5000/profile/fetchContests', {withCredentials: true})
+        .get('https://practicechef.herokuapp.com/profile/fetchContests', {withCredentials: true})
         .then(res => {
           if(Array.isArray(res.data)) setAllLongChallenge(res.data);
           // console.log(allLongChallenge);
@@ -65,7 +65,7 @@ const Contest = () => {
 
       //console.log("fetchContests finished");
       axios
-        .get('http://localhost:5000/profile/fetchSubmissions', {withCredentials: true})
+        .get('https://practicechef.herokuapp.com/fetchSubmissions', {withCredentials: true})
         .then(res => {
           // console.log(res.data);
           let dict_atm = {};

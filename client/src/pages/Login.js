@@ -20,7 +20,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="http://localhost:3000">
+      <Link color="inherit" href="https://practicechef.herokuapp.com">
         PracticeChef
       </Link>{' '}
       {new Date().getFullYear()}
@@ -84,7 +84,7 @@ const Login = () => {
   useEffect(() => {
     // console.log('here me')
     axios
-      .get("http://localhost:5000/auth/isAuthenticated", {
+      .get("https://practicechef.herokuapp.com/auth/isAuthenticated", {
         withCredentials: true,
       })
       .then((res) => {
@@ -130,7 +130,7 @@ const Login = () => {
               <div className={classes.heroButtons}>
                 <Grid container spacing={2} justify="center">
                   <Grid item>
-                    <Button variant="contained" color="primary" size="large" href="http://localhost:5000/auth/loginwithcodechef">
+                    <Button variant="contained" color="primary" size="large" href="https://practicechef.herokuapp.com/auth/loginwithcodechef">
                       Login
                     </Button>
                   </Grid>
