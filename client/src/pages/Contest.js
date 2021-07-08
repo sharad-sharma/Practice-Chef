@@ -65,7 +65,7 @@ const Contest = () => {
 
       //console.log("fetchContests finished");
       axios
-        .get('https://practicechef.herokuapp.com/fetchSubmissions', {withCredentials: true})
+        .get('https://practicechef.herokuapp.com/profile/fetchSubmissions', {withCredentials: true})
         .then(res => {
           // console.log(res.data);
           let dict_atm = {};
