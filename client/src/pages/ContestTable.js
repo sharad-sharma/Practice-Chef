@@ -80,7 +80,7 @@ function ContestTable({ contest_type, allLongChallenge, attempted, solved, parti
           </Typography>
         </TableCell>
         {
-          row_val.problemsList.map(val => {
+          row_val.problemsList.sort((a, b) => b.successfulSubmissions - a.successfulSubmissions).map(val => {
             // if(val.contestCode !== row_val.code) return;   // this problem doesn't belong to this division
             let problem_name = val.problemCode;
             let problemId = val.contestCode + "/problems/" + val.problemCode;
