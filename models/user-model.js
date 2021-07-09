@@ -6,6 +6,8 @@ const userSchema = new Schema({
   fullname: String,
   access_token: String,
   refresh_token: String,
+  current_rating: Number,
+  first_loggedin_rating: Number
 });
 
 const User = mongoose.model('users', userSchema);

@@ -77,6 +77,7 @@ router.get("/codechef/redirect", (req, res) => {
                   {
                     access_token: data.result.data.access_token,
                     refresh_token: data.result.data.refresh_token,
+                    current_rating: userDetails.current_rating
                   },
                   (err, docs) => {
                     if (err) {
@@ -93,6 +94,8 @@ router.get("/codechef/redirect", (req, res) => {
                   fullname: userDetails.fullname,
                   access_token: data.result.data.access_token,
                   refresh_token: data.result.data.refresh_token,
+                  current_rating: userDetails.current_rating,
+                  first_loggedin_rating: userDetails.current_rating
                 })
                   .save()
                   .then((newUser) => {
@@ -149,6 +152,7 @@ const getUserName = (access_token) => {
         resolve({
           username: data.result.data.content.username,
           fullname: data.result.data.content.fullname,
+          current_rating: data.result.data.content.ratings.allContest
         });
       });
     });
