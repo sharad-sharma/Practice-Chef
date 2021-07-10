@@ -113,7 +113,7 @@ function Navbar() {
         {/* <ListItem button key={'Problemset'} component={Link} to="/problems">
           <ListItemText primary={'Problemset'} />
         </ListItem> */}
-        <ListItem button key={'Discuss'} component={Link} to="/problems">
+        <ListItem button key={'Discuss'} component={Link2} target="_blank" rel="noopener" href="https://discuss.codechef.com/t/practice-chef-practice-from-the-best-problems/92260">
           <ListItemText primary={'Discuss'} />
         </ListItem>
         
