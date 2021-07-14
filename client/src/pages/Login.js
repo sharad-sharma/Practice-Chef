@@ -149,7 +149,7 @@ const Login = () => {
           {/* End hero unit */}
           
           <Typography style={{textAlign: "center", paddingBottom: 20}} component="h1" variant="h4" align="center" color="textPrimary" gutterBottom>
-            All Challanges in One Place
+            All Challenges in One Place
           </Typography>
           <Grid style={{paddingBottom: 50}}   container spacing={8}>
               <Grid item xs={12} sm={12} md={12}>

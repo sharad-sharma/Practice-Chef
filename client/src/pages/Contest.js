@@ -37,7 +37,7 @@ const Contest = () => {
     .then(res => {
       //console.log(res, "contest.js");
       if(res.data === "NO") {
-        console.log("Not logged in -Contest");
+        //console.log("Not logged in -Contest");
         setisAuth(false);
         //return <Redirect to='/login'  />
       } else {
